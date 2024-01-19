@@ -1,0 +1,18 @@
+//User function Template for C++
+
+class Solution{
+    public:
+    string longest(string names[], int n)
+    {
+      int max = names[0].size();
+      string maxS = names[0];
+      for(int i=1;i<n;i++){
+          if(names[i].size()>max){
+              max = names[i].size();
+              maxS = names[i];
+          }
+      }
+      return maxS;
+        
+    }
+};
