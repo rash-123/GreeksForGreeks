@@ -1,0 +1,24 @@
+//User function template for C++
+class Solution{
+public:	
+	vector<int> getMoreAndLess(int arr[], int n, int x) {
+	    // code here
+	    vector<int> ans(2);
+	    int smallerCount = 0;
+	    int largestCount = 0;
+	    for(int i=0;i<n;i++){
+	        if(arr[i] <= x){
+	            smallerCount++;
+	            ans[0] = smallerCount;
+	        }
+	    }      
+	    for(int i=0;i<n;i++){
+           if(arr[i] >= x){
+            largestCount++;
+            ans[1] = largestCount;
+            }
+	     }
+	     
+	    return ans;
+	}
+};
