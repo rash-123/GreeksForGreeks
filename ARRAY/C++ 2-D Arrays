@@ -1,0 +1,18 @@
+vector<vector<int>> transpose(int a[][M], int n)
+{
+    // Code here
+    vector<vector<int>> transpose1;
+    //traverse the column
+    for(int i=0;i<n;i++){
+        vector<int> temp;
+        //traverse the row
+        for(int j=0;j<M;j++){
+            int x;
+            x = a[j][i];
+            temp.push_back(x);
+        }
+        transpose1.push_back(temp);
+    }
+    return transpose1;
+    
+}
