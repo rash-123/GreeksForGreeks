@@ -1,0 +1,18 @@
+// User function Template for C++
+class Solution {
+  public:
+    string conRevstr(string S1, string S2) {
+        // code here
+        string s3 = S1 + S2;
+        int n = s3.size();
+        int left = 0, right = n-1;
+        for(int i = 0; i < n; i++){
+            if(left < right){
+                swap(s3[left], s3[right]);
+                left++;
+                right--;
+            }
+        }
+        return s3;
+    }
+};
