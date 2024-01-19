@@ -1,0 +1,26 @@
+/*Complete the function below*/
+
+class Solution {
+public:
+    int PalinArray(int a[], int n)
+    {
+    	// code here
+    	int count = 0;
+       for(int i=0;i<n;i++){
+           int reverseNum = 0;
+           int num = a[i];
+           while(num > 0){
+               int lastDigit = num % 10;
+               reverseNum = reverseNum * 10 + lastDigit;
+               num = num / 10;
+           }
+           if(reverseNum == a[i]){
+               count++;
+           }
+       }
+       if(count == n){
+           return 1;
+       }
+       return 0;
+    }    
+};
