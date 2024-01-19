@@ -1,0 +1,9 @@
+string to_upper(string str){
+    //code
+    string ans;
+    int n = str.size();
+    for(int i=0;i<n;i++){
+         ans += toupper(str[i]);
+    }
+    return ans;
+}
