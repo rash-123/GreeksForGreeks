@@ -1,0 +1,36 @@
+class Solution
+{
+    public:
+        vector <int> count (string s)
+        {
+            //code here
+            int n = s.size();
+            vector<int> countWords;
+            int lowerCase = 0;
+            int upperCase = 0;
+            int specialCase = 0;
+            int numericCase = 0;
+            for(int i=0;i<n;i++){
+                if(s[i] >= 'A' && s[i] <= 'Z'){
+                    upperCase++;
+                }
+                else if(s[i] >= 'a' && s[i] <= 'z'){
+                    lowerCase++;
+                }
+                else if(s[i] >= '0' && s[i] <= '9'){
+                    numericCase++;
+                }
+                else{
+                    specialCase++;
+                }
+                
+            }
+              countWords.push_back(upperCase);
+                countWords.push_back(lowerCase);
+                countWords.push_back(numericCase);
+                countWords.push_back(specialCase);
+         
+            return countWords;
+                
+        }
+};
