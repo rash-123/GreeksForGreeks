@@ -1,0 +1,25 @@
+class Solution
+{
+  public:
+    void sortIt(long long arr[], long long n)
+    {
+        //code here.
+        vector<int> ans;
+        sort(arr, arr + n);
+        for(int i = 0; i < n; i++){
+            if(arr[i] % 2 != 0){
+                ans.push_back(arr[i]);
+            }
+        }
+        reverse(ans.begin(), ans.end());
+        for(int i = 0; i < n; i++){
+            if(arr[i] % 2 == 0){
+                ans.push_back(arr[i]);
+            }
+        }
+        for(int i = 0; i < ans.size(); i++){
+            arr[i] = ans[i];
+        }
+       
+    }
+};
