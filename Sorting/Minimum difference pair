@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution{
+	public:
+   	int  minimum_difference(vector<int>nums){
+   	    // Code here
+   	    int n = nums.size();
+   	    sort(nums.begin(), nums.end());
+   	    int minDiff = INT_MAX;
+   	    for(int i = 1; i < n; i++){
+   	        minDiff = min(nums[i] - nums[i-1], minDiff);
+   	    }
+   	    return minDiff;
+   	}    
+};
