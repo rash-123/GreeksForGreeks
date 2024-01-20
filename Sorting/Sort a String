@@ -1,0 +1,8 @@
+string sort(string s){
+    //complete the function here
+    int n = s.size();
+    string temp = "";
+     sort(s.begin(), s.end());
+     temp += s;
+    return temp;
+}
