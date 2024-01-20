@@ -1,0 +1,28 @@
+    // Write your code here
+
+class Solution{
+    public:
+    int mergeNsort(int a[], int b[], int n, int m, int answer[])
+    {
+        // Write your code here
+        int k = 0;
+       for(int i = 0; i < n; i++)
+       {
+           answer[k++] = a[i];
+       }
+       for(int j = 0; j < m; j++)
+       {
+           answer[k++] = b[j];
+       }
+       sort(answer, answer + k);
+       int j = 0;
+       for(int i = 0; i < k; i++)
+       {
+           if(answer[i+1] == answer[i])
+           {
+               continue;
+           }
+           answer[j++] = answer[i];
+       }
+       return j;
+   
