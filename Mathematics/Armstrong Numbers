@@ -1,0 +1,19 @@
+// User function Template for C++
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        // code here
+        int original = n;
+        long long rem = 0;
+        long long ans = 0;
+        while(n > 0){
+            long long int lastDigit = n % 10;
+            ans += pow(lastDigit, 3);
+            n = n / 10;
+        }
+        if(ans == original){
+            return "Yes";
+        }
+        return "No";
+    }
+};
