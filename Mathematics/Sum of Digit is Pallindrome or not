@@ -1,0 +1,28 @@
+// User function Template for C++
+
+class Solution {
+  public:
+    int isDigitSumPalindrome(int N) {
+        // code here
+        int sum = 0;
+        while(N > 0){
+            int lastDigit = N % 10;
+            sum = sum + lastDigit;
+            N = N / 10;
+        }
+        int original = sum;
+        N = sum;
+        int reverse_sum = 0;
+        while(N > 0){
+            int lastDigit = N % 10;
+            reverse_sum = reverse_sum * 10 + lastDigit;
+            N = N / 10;
+        }
+        if(reverse_sum == original){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+};
