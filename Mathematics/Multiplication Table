@@ -1,0 +1,16 @@
+//User function Template for C++
+class Solution
+{
+public:
+    vector<int> getTable(int N)
+    {
+        // Write Your Code here
+        vector<int> ans;
+        int mul = 1;
+        for(int i = 1; i <= 10; i++){
+            mul = N * i;
+            ans.push_back(mul);
+        }
+        return ans;
+    }
+};
