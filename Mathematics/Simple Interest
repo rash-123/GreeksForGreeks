@@ -1,0 +1,13 @@
+// User function Template for C++
+
+class Solution {
+  public:
+    double simpleInterest(int P, int R, int T) {
+        // code here
+        double p = P;
+        double r = R;
+        double t = T;
+        double ans = p*r*t / 100;
+        return ans;
+    }
+};
