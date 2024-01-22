@@ -1,0 +1,16 @@
+class Solution{
+	public:
+	vector<long long int> find(int l, int b, int h)
+	{
+	    // Code here
+	    //SA = 2 (lb + bh + lh)
+	    //vol = l * b * h
+	    vector<long long int> ans;
+	    long long int L = l, B = b, H = h;
+	    long long int SA = 2*(L*B + B*H + H*L);
+	    long long int vol = L*B*H;
+	    ans.push_back(SA);
+	    ans.push_back(vol);
+	    return ans;
+	}  
+};
