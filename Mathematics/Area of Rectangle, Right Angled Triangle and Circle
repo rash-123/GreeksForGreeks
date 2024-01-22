@@ -1,0 +1,14 @@
+class Solution {
+  public:
+    vector<int> getAreas(int L , int W , int B , int H , int R) {
+        // code here
+        vector<int> ans;
+        int aofR = L * W;
+        int aofT = 0.5*B*H;
+        int aofc = 3.14*R*R;
+        ans.push_back(aofR);
+        ans.push_back(aofT);
+        ans.push_back(aofc);
+        return ans;
+    }
+};
