@@ -1,0 +1,21 @@
+class Solution{
+    public:
+    vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
+    {
+        // Your code goes here   
+        vector<pair<int,int>> ans;
+        //set<vector<int>>s;
+        sort(A,A+N);
+        unordered_map<int,int>m;
+        for(int i = 0; i < M; i++){
+            m[B[i]]++;
+        }
+        
+        for(int i = 0; i < N; i++){
+            if(m.find(X - A[i]) != m.end()){
+                ans.push_back({A[i],X - A[i]});
+            }
+        }
+        return ans;
+    }
+};
